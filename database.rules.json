@@ -1,0 +1,26 @@
+{
+  "rules": {
+    "users": {
+      ".read": "auth != null",
+      "$uid": {
+        ".write": "auth != null && $uid === auth.uid"
+      }
+    },
+    "messages": {
+      "$conversation_id": {
+        ".read": "auth != null && root.child('conversations/'+$conversation_id+'/users/'+auth.uid).exists()",
+        ".write": "auth != null && root.child('conversations/'+$conversation_id+'/users/'+auth.uid).exists()",
+        "$message_id": {
+          ".validate": "newData.hasChildren(['time','sender']) && (newData.child('text').exists() || newData.child('imageUrl').exists())"
+        }
+      }
+    },
+    "conversations": {
+      ".read": "auth != null",
+      "$conversation_id": {
+        ".write": "auth != null ",
+        ".validate": "newData.child('users/'+auth.uid).exists()"
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+*{
+    font-family: "Roboto",Helvetica,sans-serif;
+    
+
+}
+h1,h2,h3{
+    font-weight: 100;
+}
+.centered-text{
+    text-align: center;
+}
+.right-text{
+    text-align: right;
+}
+.with-margin{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.width-right-margin{
+    margin-right: 10px;
+}
+.row{
+    overflow: hidden;
+}
+.row > .col{
+    float: left;
+}
+.col.md-3{
+    width: 25%;
+}
+.col.md-4{
+    width: 33.333%;
+}
+.col.md-8{
+    width: 66.667%;
+}
+.col.md-9{
+    width: 75%;
+}
