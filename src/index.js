@@ -17,11 +17,11 @@ const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 injectTapEventPlugin();
 // Initialize Firebase
 const config = {
-    apiKey: "AIzaSyC1iZmDY5vFDz62NU2zixdlG_DGQzpmqPg",
-    authDomain: "one-to-one-chat-83ed1.firebaseapp.com",
-    databaseURL: "https://one-to-one-chat-83ed1.firebaseio.com",
-    storageBucket: "one-to-one-chat-83ed1.appspot.com",
-    messagingSenderId: "689664286911"
+    apiKey: "API_KEY",
+    authDomain: "<YOUR_FIREBASE_APP>.firebaseapp.com",
+    databaseURL: "https://<YOUR_FIREBASE_APP>.firebaseio.com",
+    storageBucket: "<YOUR_FIREBASE_APP>.appspot.com",
+    messagingSenderId: "MESSAGING_SENDER_ID"
 };
 firebase.initializeApp(config);
 window.onload = function(){
